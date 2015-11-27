@@ -1,15 +1,12 @@
-
 language: python
-
-install: "true"
-
+install:
+- make deps
 branches:
   only:
   - master
-
-install:
-  - make deps
-
 script:
-  - make publish
-  - 'make github 2> /dev/null'
+- make publish
+- make github 2> /dev/null
+env:
+  global:
+    secure: NTKQJhTraMufPDI9OfaacD5PQLkvUzaiQZXM6BPfPhVpOheHV4wHlVXMt9rYzR+eLvJZh5QBV1k8O/4AY2jgzeXdYCV4A5KVgNwO9bjETv97RfmciJEvJaEXu28Mk4PANnKzgWBdZcj628dAu0jsNf7VUp4zOM1Hm1PS11KRYp6n+NDcszu770ENr66COQVODQIO6Y+KNsIYb9tE5UsRCxM4s4FMS1outFG5Lk+LLOjCn0ex158SxVC9iCfwUnNV02w11SNmUHku5Fqra4LTDDz9UrGa/P88Y1fpqj5zjUoLjA6ALbeTJ0ZmSh1LWpcjcnT66vl+VtMZLiD+h802q6bxsYQyrH4QGntczJ+pA2jtDjLo39U9zXXwIe0lRVPGVKV8z8/+fBp9xDmupBqjjj+8Vfh+8f79eI80QKv1Ageicgg5mAQ3GMX+hj3rdI1HIOHFychBxtceSqy/ZXeFJkz0pkn5BBpQQW+zxwTuhIBr4ptLJcXtl+3cC8A+OgDYEE7OwK7q3maToa9OjRtN1Civ4f8BVCrbwOOwx+uc9jtDIAFIg+/jox6Do8aL8Oan0IJl77bzEUbeiZAhQWbrDtSzi8CPlp8mnEFspQejedJ45BF/Yvy7kfG6A0S8HWN5rLKCA/QlYoS8ChVuTNQbV25vA7Y5blOv830EPwNpT2I=
