@@ -85,7 +85,7 @@ s3_upload: publish
 
 github: publish
 	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
+	git push origin https://${GH_TOKEN}@github.com/linearregression/jonio_website.git:gh-pages
 
 deps:
 	pip install -r ./requirements.txt --use-mirrors
