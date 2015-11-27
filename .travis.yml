@@ -1,0 +1,16 @@
+sudo: false
+
+language: python
+
+install: "true"
+
+branches:
+  only:
+  - master
+
+install:
+  - make deps
+
+script:
+  - make publish
+  - 'make github 2> /dev/null'
